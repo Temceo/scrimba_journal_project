@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+:root {
+  --ff-raleway: "Raleway", sans-serif;
+  --fc-black: 0, 0, 0;
+  --fc-white: 255, 255, 255;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ff-raleway);
+  font-size: 1rem;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+.container {
+  width: 90%;
+  margin-inline: auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* INDEX PAGE */
+
+/* top navigation */
+.nav-container {
+  font-size: 0.8rem;
+}
+
+.nav-container .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.nav a,
+.logo a {
+  color: var(--fc-black);
+  font-weight: 700;
+}
+
+.nav {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.logo a:hover,
+.logo a:focus,
+.nav a:hover,
+.nav a:focus {
+  color: rgba(var(--fc-black), 0.5);
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid rgba(var(--fc-black), 0.5);
+}
+
+.view-more {
+  text-align: center;
+}
+
+/* hero section */
+.hero {
+  background: url(../images/computer_screen2.jpg) no-repeat center center /
+    cover;
+  color: rgb(var(--fc-white));
+  overflow: hidden;
+  height: 45vh;
+  position: relative;
+}
+
+.hero .container {
+  color: rgb(var(--fc-white));
+  position: absolute;
+  top: 15%;
+  left: 5%;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(var(--fc-black), 0.6);
+}
+
+/* blogs section */
+
+.blogs {
+  margin-top: 3rem;
+}
+
+.img-card {
+  width: 100%;
+  height: 300px;
+}
+
+.blog img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.lg-screen {
+  display: none;
+}
+
+/* footer */
+footer {
+  padding: 2rem 0;
+  margin-top: 1rem;
+  text-align: center;
+  color: rgb(var(--fc-white));
+  background-color: rgb(var(--fc-black));
+}
+
+footer h3,
+footer p {
+  margin: 0;
+}
+
+/* ABOUT ME PAGE */
+
+.about-img-container img {
+  width: 18.75rem;
+  height: 18.75rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* media queries */
+@media screen and (min-width: 599px) {
+  .nav-container {
+    font-size: 1rem;
+  }
+  .hero {
+    height: 50vh;
+  }
+
+  .hero .container {
+    top: 30%;
+  }
+
+  .blogs .container {
+    max-width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .blog {
+    flex-basis: 49%;
+  }
+
+  .lg-screen {
+    display: block;
+  }
+}
+
+@media (min-width: 850px) {
+  .blog {
+    flex-basis: 32%;
+  }
+
+  .hero .container {
+    top: 40%;
+  }
+}
+
+/* BLOGS PAGE */
+.posts {
+  text-align: center;
+}
